@@ -9,7 +9,7 @@ terraform apply
 echo "[webservers]" > env/hosts
 cat terraform.tfstate | grep '"private_ip":' | cut -d '"' -f 4 >> env/hosts
 
-cat private_key >> ~/.ssh/id_rsa
+cat private_key > ~/.ssh/id_rsa
 chmod 600 ~/.ssh/id_rsa
 
 echo "sleeping.."
